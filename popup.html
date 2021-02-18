@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/popup.js" defer></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/popup.css">
+</head>
+
+<body>
+    <div align="center">
+        <div class="avatar-container">
+            <img src="static/noface.jpg" id="avatar">
+            <div class="user-type" id="user-type"></div>
+        </div>
+    </div>
+    <div align="center">
+        <span id="username" class="username"></span>
+        <span id="vip-sign" class="vip-sign"></span>
+    </div>
+    <div style="margin-bottom: 4px;">
+        <div class="container">
+            <span class="level-left" id="level">
+                Level -
+            </span>
+            <span class="level-right" id="exp">
+                - / -
+            </span>
+        </div>
+        <div class="center-align">
+            <div class="expbar">
+                <div class="expbar-fill" id="expbar-fill" style="width: 50%;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left center-align">
+            <span class="key center-align"></span>
+            <div>
+                <span class="value center-align" id="follow">-</span>
+            </div>
+        </div>
+        <div class="center center-align">
+            <span class="key center-align"></span>
+            <div>
+                <span class="value center-align" id="follower">-</span>
+            </div>
+        </div>
+        <div class="right center-align">
+            <span class="key center-align"></span>
+            <div>
+                <span class="value center-align" id="dynamic">-</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

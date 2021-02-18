@@ -1,0 +1,39 @@
+{
+	"manifest_version": 2,
+	"name": "__MSG_title__",
+	"version": "0.1.0",
+	"description": "__MSG_title__",
+	"icons":
+	{
+		"48": "static/favicon.png",
+		"16": "static/favicon.png",
+		"32": "static/favicon.png"
+	},
+	"background":
+	{
+		"page": "background.html"
+	},
+	"browser_action": 
+	{
+		"default_icon": "static/favicon.png",
+		"default_popup": "popup.html"
+	},
+	"permissions":
+	[
+		"contextMenus",
+		"tabs",
+		"webRequest",
+		"storage",
+		"cookies",
+		"http://*/*",
+		"https://*/*"
+	],
+	"web_accessible_resources": [],
+	"options_ui":
+	{
+		"page": "options.html",
+		"chrome_style": true
+    },
+    "omnibox": { "keyword" : "bili" },
+	"default_locale": "zh_CN"
+}

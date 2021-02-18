@@ -1,0 +1,26 @@
+{
+    "title": {
+        "message": "Bilibili Search"
+    },
+    "searchHint": {
+        "message": "Bilibili Search: "
+    },
+    "noSearchHint": {
+        "message": "I don't want to search now…"
+    },
+    "videoHint": {
+        "message": "Watch Video: "
+    },
+    "articleHint": {
+        "message": "Read Article: "
+    },
+    "follower": {
+        "message": "Followers"
+    },
+    "follow": {
+        "message": "Following"
+    },
+    "dynamic": {
+        "message": "Dynamic Count"
+    }
+}
