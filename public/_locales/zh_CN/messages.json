@@ -1,0 +1,29 @@
+{
+    "title": {
+        "message": "B站搜索"
+    },
+    "noSearchHint": {
+        "message": "现在不想搜索"
+    },
+    "searchHint": {
+        "message": "B站搜索: "
+    },
+    "videoHint": {
+        "message": "进入视频: "
+    },
+    "articleHint": {
+        "message": "进入文章: "
+    },
+    "userHint": {
+        "message": "打开空间: "
+    },
+    "follower": {
+        "message": "粉丝"
+    },
+    "follow": {
+        "message": "关注"
+    },
+    "dynamic": {
+        "message": "动态"
+    }
+}

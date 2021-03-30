@@ -1,19 +1,19 @@
 <template>
-  <hello-world />
+  <router-view></router-view>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: { HelloWorld }
+  data () {
+    return {}
+  }
 }
 </script>
 
 <style>
-html {
-  width: 400px;
-  height: 400px;
+.main {
+  width: 320px;
+  min-height: 500px;
 }
 </style>

@@ -1,6 +1,29 @@
 {
-  "extName": {
-    "message": "bilibili-extension-chrome",
-    "description": ""
-  }
+    "title": {
+        "message": "Bilibili Search"
+    },
+    "searchHint": {
+        "message": "Bilibili Search: "
+    },
+    "noSearchHint": {
+        "message": "I don't want to search now…"
+    },
+    "videoHint": {
+        "message": "Watch Video: "
+    },
+    "articleHint": {
+        "message": "Read Article: "
+    },
+    "userHint": {
+        "message": "Open Space: "
+    },
+    "follower": {
+        "message": "Followers"
+    },
+    "follow": {
+        "message": "Following"
+    },
+    "dynamic": {
+        "message": "Dynamic Count"
+    }
 }

@@ -8529,6 +8529,11 @@ vm-browserify@^1.0.1:
   resolved "https://registry.npm.taobao.org/vm-browserify/download/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha1-eGQcSIuObKkadfUR56OzKobl3aA=
 
+vue-async-computed@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.npm.taobao.org/vue-async-computed/download/vue-async-computed-3.9.0.tgz#af3181c25168bfe9d86d8ffbc7033bf9e484fe84"
+  integrity sha1-rzGBwlFov+nYbY/7xwM7+eSE/oQ=
+
 vue-cli-plugin-browser-extension@latest:
   version "0.25.2"
   resolved "https://registry.npm.taobao.org/vue-cli-plugin-browser-extension/download/vue-cli-plugin-browser-extension-0.25.2.tgz#e56b11f58a0a429885d766c27298a1bca7108aee"
