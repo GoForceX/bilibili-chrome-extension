@@ -1,16 +1,15 @@
 import Vue from 'vue'
 import AsyncComputed from 'vue-async-computed'
-import VueRouter from 'vue-router'
 import App from './App.vue'
 import router from '../router'
 
 Vue.use(AsyncComputed)
-Vue.use(VueRouter)
 
 Vue.config.productionTip = false
 
+/* eslint-disable no-new */
 new Vue({
-  el: "#app",
+  el: '#app',
   router,
-  render: h => h(App),
+  render: h => h(App)
 })
