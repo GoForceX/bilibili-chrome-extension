@@ -47,95 +47,94 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios'
 
 export default {
-  name: "UserInfo",
-  data() {
+  name: 'UserInfo',
+  data () {
     return {
-      username: "-",
-      vip: "",
-      level: "-",
-      expNow: "-",
-      expNext: "-",
-      followI18n: chrome.i18n.getMessage("follow"),
-      follow: "-",
-      followerI18n: chrome.i18n.getMessage("follower"),
-      follower: "-",
-      dynamicI18n: chrome.i18n.getMessage("dynamic"),
-      dynamic: "-",
-      faceUrl: require("../assets/noface.jpg"),
+      username: '-',
+      vip: '',
+      level: '-',
+      expNow: '-',
+      expNext: '-',
+      followI18n: chrome.i18n.getMessage('follow'),
+      follow: '-',
+      followerI18n: chrome.i18n.getMessage('follower'),
+      follower: '-',
+      dynamicI18n: chrome.i18n.getMessage('dynamic'),
+      dynamic: '-',
+      faceUrl: require('../assets/noface.jpg'),
       userType: {
-        "personal-auth": false,
-        "organization-auth": false,
-        "vip-auth": false,
+        'personal-auth': false,
+        'organization-auth': false,
+        'vip-auth': false
       },
       vipStyle: {
-        display: "none",
+        display: 'none'
       },
       nameStyle: {
-        color: "#000000",
+        color: '#000000'
       },
       expbarStyle: {
-        width: "0%",
-      },
-    };
+        width: '0%'
+      }
+    }
   },
   asyncComputed: {
     setInfo: {
-      get() {
+      get () {
         axios({
-          method: "get",
-          url: "https://api.bilibili.com/x/space/myinfo",
+          method: 'get',
+          url: 'https://api.bilibili.com/x/space/myinfo'
         })
           .then((res) => {
-            var response = res.data;
-            if (response.code != 0) {
-              this.$router.push("/error");
+            var response = res.data
+            if (response.code !== 0) {
+              this.$router.push('/error')
             }
-            var data = response.data;
-            this.level = data.level_exp.current_level;
-            this.expNow = data.level_exp.current_exp;
-            this.expNext = data.level_exp.next_exp;
+            var data = response.data
+            this.level = data.level_exp.current_level
+            this.expNow = data.level_exp.current_exp
+            this.expNext = data.level_exp.next_exp
             this.expbarStyle.width =
               (data.level_exp.current_exp / data.level_exp.next_exp) * 100 +
-              "%";
-            var mid = data.mid;
+              '%'
             axios({
-              method: "get",
-              url: "https://api.bilibili.com/x/web-interface/nav/stat",
+              method: 'get',
+              url: 'https://api.bilibili.com/x/web-interface/nav/stat'
             })
               .then((resp) => {
-                resp = resp.data;
-                this.follow = resp.data.following;
-                this.follower = resp.data.follower;
-                this.dynamic = resp.data.dynamic_count;
+                resp = resp.data
+                this.follow = resp.data.following
+                this.follower = resp.data.follower
+                this.dynamic = resp.data.dynamic_count
               })
               .catch(function (error) {
-                console.log(error);
-              });
-            this.faceUrl = data.face.replace("http", "https");
-            if (data.official.role == 1 || data.official.role == 2) {
-              this.userType["personal-auth"] = true;
+                console.log(error)
+              })
+            this.faceUrl = data.face.replace('http', 'https')
+            if (data.official.role === 1 || data.official.role === 2) {
+              this.userType['personal-auth'] = true
             } else if (data.official.role >= 3 && data.official.role <= 6) {
-              this.userType["organization-auth"] = true;
-            } else if (data.vip.status == 1) {
-              this.userType["vip-auth"] = true;
+              this.userType['organization-auth'] = true
+            } else if (data.vip.status === 1) {
+              this.userType['vip-auth'] = true
             }
-            if (data.vip.status == 1) {
-              this.nameStyle.color = "#fb7299";
-              this.vipStyle.display = "inline-block";
-              this.vip = data.vip.label.text;
+            if (data.vip.status === 1) {
+              this.nameStyle.color = '#fb7299'
+              this.vipStyle.display = 'inline-block'
+              this.vip = data.vip.label.text
             }
-            this.username = data.name;
+            this.username = data.name
           })
           .catch(function (error) {
-            console.log(error);
-          });
-      },
-    },
-  },
-};
+            console.log(error)
+          })
+      }
+    }
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

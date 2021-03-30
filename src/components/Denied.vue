@@ -10,11 +10,11 @@
 
 <script>
 export default {
-  name: "Denied",
-  data() {
-    return {};
-  },
-};
+  name: 'Denied',
+  data () {
+    return {}
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
